@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero{
+    display: flex;
+    width: 88vw;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 2rem auto;
+    height: 100vh;
+    background: rgb(207, 207, 207);
+    padding: 0 2rem;
+}
+.hero .details-info{
+    height: 90vh;
+    width: 45vw;
+    background: rgb(255, 255, 255);
+}
+.navbar{
+    margin: 10px;
+    /* background: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo{
+    height: 40px;
+    width: 40px;
+    background: rgb(208, 223, 195);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+}
+.logo img{
+    height: 30px;
+    width: 30px;
+}
+
+.menu a{
+    margin:15px;
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight:bold;
+    color: black;
+}
+.menu .gd, .menu .tp{
+    color: gray;
+}
+.hero .models{
+    height: 90vh;
+    width: 45vw;
+   
+    
+}
+.hero .models img{
+    height: 90vh;
+    width: 44vw;
+
+}

@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:rgb(241, 99, 99);
+}
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container .btn{
+    display: flex;
+    height: 500px;
+    width: 1000px;
+    padding: 
+    6rem;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+.btn a{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+
+}
+/* First button start from here!! */
+.btn .me{
+    background: #000;
+    padding: 2rem 3rem;
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    position: relative;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+.btn .me::before{
+    content: "Download";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    color: #000;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: all 0.8s;
+}
+.me:hover::before{
+    transform: translateX(0);
+}
+/* Second button start from here */
+.btn .him{
+    color: black;
+    padding: 2rem 3rem;
+    background: white;
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.8s;
+}
+.him::before{
+    content: "Download";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    display: flex;
+    background: orange;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(270deg);
+    transform-origin: top;
+    transition: all 0.8s;
+}
+/* .him::after{
+    content: "Download";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 25px;
+    background: pink;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(-270deg);
+    transform-origin: top;
+    transition: all 0.8s; */
+/* } */
+.him:hover::before, .him:hover::after{
+    transform: rotateX(0);
+}
+/* Third button start from here */
+.btn .You{
+    padding: 1rem 3rem;
+    background: transparent;
+    line-height: 60px;
+    letter-spacing: 2px;
+    color: white;
+    position: relative;
+}
+.You::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: -3px;
+    left: -3px;
+    background: #000;
+    mix-blend-mode: multiply;
+    z-index: -1;
+    transform-origin: top;
+    transition: all 0.5s;
+}
+.You::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 3px;
+    left: 3px;
+    background: gray;
+    mix-blend-mode: multiply;
+    transform-origin: bottom;
+    z-index: -1;
+    transition: all 0.5s;
+
+}
+.You:hover::before{
+    transform: perspective(1000px) rotateX(75deg);
+}
+.You:hover::after{
+    transform: perspective(1000px) rotateX(-75deg);
+}
+.You:hover{
+    color: #000;
+}
+
+/* Forth button start here */
+
+.btn .learn{
+ padding: 1rem 3rem;
+ background: black;
+ position: relative;
+ color: white;
+ border-radius: 3px;
+ transition: all 0.5s;
+}
+.learn::before{
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    /* background: white; */
+    left: -12px;
+    top:-12px;
+
+}
+
+.learn::after{
+    content: "";
+    position:absolute;
+    height: 24px;
+    width: 24px;
+    bottom: -12px;
+    right: -12px;
+}
+.learn:hover::before{
+    border-top: 4px solid rgb(255, 139, 7);
+    border-left: 4px solid white;
+    width: 100%;
+}
+.learn:hover::after{
+    border-bottom: 4px solid white;
+    border-right: 4px solid rgb(255, 18, 18);
+    width: 100%;
+}
+
+/* Fifth button */
+
+
+.btn .hover{
+    padding: 1rem 3rem;
+    background: #000;
+    color: white;
+    position: relative;
+    border-radius: 25px;
+    transition: all 0.5s;
+
+}
+.hover::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: white;
+    z-index: -1;
+    border-radius: 100px;
+}
+.hover:hover::before{
+    transform: scaleX(1.3) scaleY(1.6);
+    opacity: 0.2;
+}
+.hover:hover{
+    transform: translateY(-3px);
+    box-shadow: 10px 20px 30px black;
+}
+.hover:hover{
+    transform: translateY(3px);
+    box-shadow: 10px 20px 30px black;
+}

@@ -1,0 +1,135 @@
+body{
+    height: 100vh;
+    background: rgb(233, 207, 158);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+.me{
+    padding: 2rem 3rem;
+    background: #000;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow-x: hidden;
+}
+.me::before{
+    content: "Download";
+    position: absolute;
+    color: black;
+    background: white;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+.me:hover::before{
+    transform: translateX(0);
+}
+
+/* Second button */
+.he{
+    padding: 2rem 3rem;
+    background: gray;
+    color: black;
+    
+    border-radius: 5px;
+    transition: all 0.2s;
+    position: relative;
+}
+.he::before{
+    content: "Him";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(270deg);
+    background: white;
+    transition: all 0.8s;
+    transform-origin: top;
+}
+.he:after{
+    content: "Him";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: orange;
+    transition: all 0.8s;
+    transform: rotateX(270deg);
+}
+.he:hover::before,
+.he:hover::after{
+    transform: rotateX(0);
+}
+
+
+/* Third button start from here */
+
+.you{
+    padding: 1rem 3rem;
+    background: transparent;
+    color: white;
+    line-height: 60px;
+    letter-spacing: 2px ;
+    transition: all 0.2s;
+    position: relative;
+}
+.you::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -3px ;
+    left: -3px;
+    background: black;
+    z-index: -1;
+    transform-origin: top;
+    transition: all 0.2s;
+    mix-blend-mode: multiply;
+}
+.you::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 3px;
+    left: 3px;
+    z-index: -1;
+    background: orange;
+    transform-origin: bottom;
+    mix-blend-mode: multiply;
+}
+
+.you:hover::before{
+    transform: perspective(1000px) rotateX(-75deg);
+}
+.you:hover::after{
+    transform: perspective(1000px) rotateX(75deg);
+}
+.you:hover{
+    color: black;
+}

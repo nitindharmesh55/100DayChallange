@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+    font-family: sans-serif;
+    align-items: center;
+}
+.one{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.one li{
+    list-style: none;
+
+}
+.one li a{
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    color: crimson;
+    position: relative;
+    transition: all 1s;
+
+}
+.one li a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    transform-origin: left;
+    background: #000;
+    transition: all 1s;
+}
+.one li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: black;
+    transform: scaleX(0);
+    transition: all 1s;
+    transform-origin: right;
+}
+.one li a:hover::before,
+.one li a:hover::after{
+    transform: scale(1);
+}
+
+/* Second Nav bar */
+
+.two{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+.two li{
+    list-style: none;
+}
+.two li a{
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    color: black;
+    position: relative;
+}
+.two li a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scaleY(1);
+    opacity: 0;
+    /* background: crimson; */
+    border-top: 2px solid crimson;
+    border-bottom: 2px solid crimson;
+    transition: all 1s;
+}
+.two li a::after{
+   content: "";
+   background: crimson;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   transition: all 1s;
+   transform: scale(0);
+   z-index: -1;
+}
+.two li a:hover::before{
+    transform: scaleY(1.2);
+    opacity: 1;
+}
+.two li a:hover::after{
+    transform: scale(1);
+}
+.two li a:hover{
+    color: white;
+}
